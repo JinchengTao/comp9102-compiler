@@ -393,8 +393,7 @@ public final class Checker implements Visitor {
   }
   //================================ Expressions =======================================
 
-  // Returns the Type denoting the type of the expression. Does
-  // not use the given object.
+  
   public Expr i2f(Expr expr){
 	  Expr new_expr = new UnaryExpr(new Operator("i2f", expr.position), expr, expr.position);
 	  new_expr.type = StdEnvironment.floatType;
@@ -633,7 +632,7 @@ public final class Checker implements Visitor {
 		return ast.type;
 	}
 	
-  //This one may need to change ---about return + void type function
+ 
   public Object visitEmptyExpr(EmptyExpr ast, Object o) {
     ast.type = StdEnvironment.errorType;
     return ast.type;
